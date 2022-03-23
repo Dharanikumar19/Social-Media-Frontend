@@ -18,7 +18,7 @@ function Messenger() {
   useEffect(() => {
     const getConversations = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/conversations/${user._id}`)
+        const res = await axios.get(`https://dk-social-media.herokuapp.com/api/conversations/${user._id}`)
         setConversations(res.data)
       } catch (error) {
         console.log(error)
@@ -31,7 +31,7 @@ function Messenger() {
   useEffect(() => {
     const getMessages = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/messages/${currentChat?._id}`)
+        const res = await axios.get(`https://dk-social-media.herokuapp.com/api/messages/${currentChat?._id}`)
         setMessages(res.data)
       } catch (error) {
         console.log(error)
@@ -50,7 +50,7 @@ function Messenger() {
     };
 
     try {
-      const res = await axios.post(`http://localhost:5000/api/messages`, message)
+      const res = await axios.post(`https://dk-social-media.herokuapp.com/api/messages`, message)
       setMessages([...messages, res.data])
       setNewMessage("")
     } catch (error) {
