@@ -1,0 +1,64 @@
+.newconversation{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conversationWrapper{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.convoRight {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 150px;
+    border-style: outset;
+}
+
+.convoheading{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+.convoBox{
+    height: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.convoInput{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.convoInput:focus{
+    outline: none;
+}
+
+.convoButton{
+    height: 30px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    background-color:rgb(30, 112, 167);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
