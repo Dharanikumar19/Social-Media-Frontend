@@ -30,7 +30,7 @@
 }
 
 .loginBox{
-    height: 280px;
+    height: 320px;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
@@ -62,10 +62,6 @@
     cursor: pointer;
 }
 
-.loginForgot{
-    text-align: center;
-    color: #1775ee;
-}
 
 .loginRegisterButton{
     text-decoration: none;
@@ -83,4 +79,21 @@
 }
 .regbutton{
     text-align: center;
+}
+
+.demoCredentialButton{
+    margin-top: 4px;
+    padding: auto;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+    align-self: center;
+    height: 30px;
+    border: none;
+    background-color: #1e579c;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
 }

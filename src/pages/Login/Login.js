@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef,useState } from 'react'
 import "./Login.css"
 import {loginApi} from "../../loginApi"
 import { AuthContext } from '../../context/AuthContext';
@@ -7,6 +7,11 @@ import { Alert } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 
 function Login() {
+const [formValue, setFormValue] = useState("")
+
+  const fillInputs = () => {
+      setFormValue({email : "black@gmail.com", password : "123456"})
+  }
 
  const email = useRef();
  const password = useRef();
@@ -31,13 +36,15 @@ const handleSubmit = async(e) => {
                     <div className='loginRight'>
                         <form className='loginBox' onSubmit={handleSubmit}>
                         {error ? <Alert severity="error">Invalid Email or Password — check it out! </Alert> : ""} 
-                            <input placeholder='Enter your Email' type="email" className='loginInput' ref={email} required/> 
-                            <input placeholder='Enter your Password' type="password" className='loginInput' ref={password} minLength="6" required/> 
+                            <input placeholder='Enter your Email' type="email" className='loginInput' value={formValue.email} ref={email} required/> 
+                            <input placeholder='Enter your Password' type="password" className='loginInput' value={formValue.password} ref={password} minLength="6" required/> 
                             <button className='loginButton'>{isFetching ? <CircularProgress color="secondary"/> : "Login"}</button>
                             <Link to="/register" className="regbutton">
                         <button className='loginRegisterButton'>Create a New Account</button>
                         </Link>
+                        <div className='demoCredentialButton' onClick={() => fillInputs()}>Demo Credentials</div>
                         </form>
+                        
                         
                     </div>
                 </div>
